@@ -6,14 +6,15 @@
     </div>
 
     <div class="box">
-        <% items.map(function(item){ %>
-            <div class="item">
-                <input type="checkbox" />
-                <p>
-                    <%=item%>
-                </p>
-            </div>
-            <%}) %>
+        <% items.forEach(function(item){ %>
+            <form action="/delete" method="post">
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()"/>
+                    <p><%=item.name%></p>
+                </div>
+                <input type="hidden" name="list" value="<%=title %>">
+            </form>
+        <%}) %>
 
                 <form class="item " action="/" method="post">
                     <input type="text" name="newItem" placeholder="Things needed to be done" autocomplete="off">
