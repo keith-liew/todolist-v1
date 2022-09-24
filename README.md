@@ -28,6 +28,16 @@
 
 1. Install dependencies: `npm install`
 2. Run server: `note app.js`
+3. Create a mongoDB Atlas account 
+4. Connect to your database via mongoose with the URI of your database (remember to change the information of username,password,clustername and password accordingly)
+```
+mongoose.connect("mongodb+srv://<username>:<password>@<clustername>.mongodb.net/<databasename>?w=majority");
+```
+- Your should be able to get a customized URI from your account
+- For more detailed information and documentation, please visit mongoDB doc website [mongoDB/docs](https://www.mongodb.com/docs/atlas/)
+
+
+- NOTE: An alternative way to experience the web app is available on [Cyclic](https://busy-crown-boa.cyclic.app/)
 
 # Lesson Learned
 
@@ -42,6 +52,7 @@
   - Learn the most basic mongoose functions and methods in order to manipulate the data from database
 - Establish connection between cloud database service and web
 - Make good use of hidden input and express dynamic route parameters to futher improve posting request
+- Found alternative fullstack hosting websites other than heroku
 
 # Preview
 
